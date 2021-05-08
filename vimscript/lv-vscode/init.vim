@@ -55,6 +55,17 @@ endfunction
 let g:mapleader = ','
 let g:maplocalheader = ';'
 
+" Escape
+inoremap <silent> jk <esc>
+inoremap <silent> jj <esc>
+inoremap <silent> kj <esc>
+
+" Save
+nnoremap <silent> <leader><leader> :call VSCodeNotify('workbench.action.files.save')<CR>
+
+" Quit
+nnoremap <silent> q <Cmd>Quit<CR>
+
 " Better Navigation
 nnoremap <silent> <C-j> :call VSCodeNotify('workbench.action.navigateDown')<CR>
 xnoremap <silent> <C-j> :call VSCodeNotify('workbench.action.navigateDown')<CR>
