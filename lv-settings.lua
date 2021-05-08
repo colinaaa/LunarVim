@@ -14,7 +14,7 @@ O.auto_close_tree = 0
 O.wrap_lines = false
 O.timeoutlen = 100
 
--- dashboard 
+-- dashboard
 -- O.dashboard.custom_header = {""}
 -- O.dashboard.footer = {""}
 
@@ -46,7 +46,6 @@ O.python.analysis.use_library_code_types = true
 -- lua
 -- TODO look into stylua
 O.lua.formatter = 'lua-format'
--- O.lua.formatter = 'lua-format'
 O.lua.autoformat = false
 
 -- javascript

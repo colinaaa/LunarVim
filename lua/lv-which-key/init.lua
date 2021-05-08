@@ -45,7 +45,11 @@ local opts = {
 
 -- Set leader
 vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
-vim.g.mapleader = ' '
+vim.g.mapleader = ','
+vim.g.maplocalleader = ';'
+
+-- save file
+vim.api.nvim_set_keymap('n', '<Leader><Leader>', ':w<CR>', {noremap = true, silent = true})
 
 -- no hl
 vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true})
@@ -60,11 +64,11 @@ vim.api.nvim_set_keymap('n', '<Leader>f', ':Telescope find_files<CR>', {noremap 
 vim.api.nvim_set_keymap('n', '<Leader>;', ':Dashboard<CR>', {noremap = true, silent = true})
 
 -- Comments
-vim.api.nvim_set_keymap("n", "<leader>/", ":CommentToggle<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("v", "<leader>/", ":CommentToggle<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<Leader>/", ":CommentToggle<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("v", "<Leader>/", ":CommentToggle<CR>", {noremap = true, silent = true})
 
 -- close buffer
-vim.api.nvim_set_keymap("n", "<leader>c", ":BufferClose<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "<Leader>c", ":BufferClose<CR>", {noremap = true, silent = true})
 
 -- TODO create entire treesitter section
 
