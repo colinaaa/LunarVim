@@ -81,7 +81,7 @@ return require("packer").startup(
         -- Status Line and Bufferline
         use {"glepnir/galaxyline.nvim", opt = true}
         use {"romgrk/barbar.nvim", opt = true}
- 
+
         -- Text objects
         use {
             "blackCauldron7/surround.nvim",
