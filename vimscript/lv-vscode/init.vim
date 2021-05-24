@@ -1,6 +1,7 @@
 " packadd quickscope
 
 luafile ~/.config/nvim/lua/settings.lua
+luafile ~/.config/nvim/lua/plugins.lua
 
 function! s:manageEditorSize(...)
     let count = a:1
