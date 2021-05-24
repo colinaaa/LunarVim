@@ -90,6 +90,29 @@ return require("packer").startup(
             end
         }
 
+        -- Utils
+        use {
+            "colinaaa/swim.vim",
+            ft = {"tex", "md", "plaintex"},
+            run = "bash ./build.sh",
+            cond = "vim.fn.has('mac')"
+        }
+        use {"rhysd/clever-f.vim"}
+        use {
+            "rhysd/accelerated-jk",
+            event = "BufRead",
+            setup = function()
+                vim.api.nvim_set_keymap('n', 'j', '<Plug>(accelerated_jk_gj)', {silent = true})
+                vim.api.nvim_set_keymap('n', 'k', '<Plug>(accelerated_jk_gk)', {silent = true})
+            end
+        }
+        use {"hkupty/iron.nvim", cmd = {"IronRepl", "IronWatchCurrentFile"}}
+        use {
+            "lambdalisue/suda.vim",
+            event = "BufRead",
+            setup = "vim.g.suda_smart_edit = 1"
+        }
+
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
         require_plugin("nvim-lspinstall")
@@ -114,5 +137,10 @@ return require("packer").startup(
         require_plugin("galaxyline.nvim")
         require_plugin("barbar.nvim")
         require_plugin("surround.nvim")
+        require_plugin("swim.vim")
+        require_plugin("clever-f.vim")
+        require_plugin("iron.nvim")
+        require_plugin("rhysd/accelerated-jk")
+        require_plugin("lambdalisue/suda.vim")
     end
 )
