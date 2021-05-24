@@ -81,6 +81,14 @@ return require("packer").startup(
         -- Status Line and Bufferline
         use {"glepnir/galaxyline.nvim", opt = true}
         use {"romgrk/barbar.nvim", opt = true}
+ 
+        -- Text objects
+        use {
+            "blackCauldron7/surround.nvim",
+            config = function()
+                require "surround".setup {}
+            end
+        }
 
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
@@ -105,5 +113,6 @@ return require("packer").startup(
         require_plugin("nvim-web-devicons")
         require_plugin("galaxyline.nvim")
         require_plugin("barbar.nvim")
+        require_plugin("surround.nvim")
     end
 )
