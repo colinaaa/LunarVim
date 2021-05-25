@@ -126,13 +126,8 @@ return require("packer").startup(
         }
         use {
             "norcalli/nvim-colorizer.lua",
-            ft = {"javascript", "javascriptreact", "typescript", "typescriptreact", "html", "css"},
-            config = function()
-                require'colorizer'.setup {
-                    'css';
-                    'javascript';
-                }
-            end
+            opt = true,
+            ft = {"javascript", "javascriptreact", "typescript", "typescriptreact", "html", "css"}
         }
 
         require_plugin("nvim-lspconfig")
