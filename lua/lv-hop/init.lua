@@ -1,0 +1,5 @@
+vim.api.nvim_set_keymap('n', '<localleader>w', ":HopWord<cr>", {noremap=true})
+vim.api.nvim_set_keymap('n', '<localleader>f', ":HopPattern<cr>", {noremap=true})
+vim.api.nvim_set_keymap('n', '<localleader>l', ":HopLine<cr>", {noremap=true})
+vim.api.nvim_set_keymap('n', '<localleader>c', ":HopChar1<cr>", {noremap=true})
+vim.api.nvim_set_keymap('n', '<localleader>t', ":HopChar2<cr>", {noremap=true})

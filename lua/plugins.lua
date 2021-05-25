@@ -90,6 +90,17 @@ return require("packer").startup(
             end
         }
 
+        -- Motion
+        use {
+            'phaazon/hop.nvim',
+            as = 'hop',
+            cmd = {"HopWord", "HopPattern", "HopChar1", "HopChar2", "HopLine"},
+            config = function()
+              -- you can configure Hop the way you like here; see :h hop-config
+              require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+            end
+        }
+
         -- Utils
         use {
             "colinaaa/swim.vim",
@@ -142,5 +153,6 @@ return require("packer").startup(
         require_plugin("iron.nvim")
         require_plugin("rhysd/accelerated-jk")
         require_plugin("lambdalisue/suda.vim")
+        require_plugin("hop.nvim")
     end
 )
