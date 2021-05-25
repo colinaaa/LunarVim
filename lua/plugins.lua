@@ -74,6 +74,7 @@ return require("packer").startup(
 
         -- Color
         use {"christianchiarulli/nvcode-color-schemes.vim", opt = true}
+        use {"folke/tokyonight.nvim"}
 
         -- Icons
         use {"kyazdani42/nvim-web-devicons", opt = true}
@@ -122,6 +123,16 @@ return require("packer").startup(
             "lambdalisue/suda.vim",
             event = "BufRead",
             setup = "vim.g.suda_smart_edit = 1"
+        }
+        use {
+            "norcalli/nvim-colorizer.lua",
+            ft = {"javascript", "javascriptreact", "typescript", "typescriptreact", "html", "css"},
+            config = function()
+                require'colorizer'.setup {
+                    'css';
+                    'javascript';
+                }
+            end
         }
 
         require_plugin("nvim-lspconfig")
