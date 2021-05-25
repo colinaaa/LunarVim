@@ -41,3 +41,6 @@ vim.g.nvim_tree_disable_netrw = O.nvim_tree_disable_netrw
 vim.o.guifont = "FiraCode Nerd Font:h17"
 
 -- vim.o.guifont = "JetBrains\\ Mono\\ Regular\\ Nerd\\ Font\\ Complete"
+
+vim.g.mapleader = ','
+vim.g.maplocalleader = ';'

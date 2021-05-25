@@ -63,3 +63,6 @@ vim.g.nvim_tree_icons = {
     git = {unstaged = "", staged = "✓", unmerged = "", renamed = "➜", untracked = ""},
     folder = {default = "", open = "", empty = "", empty_open = "", symlink = ""}
 }
+
+vim.api.nvim_set_keymap('n', '<localleader>a', ':NvimTreeToggle<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<localleader>e', ':NvimTreeFindFile<CR>', {noremap = true})

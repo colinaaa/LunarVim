@@ -43,10 +43,7 @@ local opts = {
     nowait = false -- use `nowait` when creating keymaps
 }
 
--- Set leader
 vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
-vim.g.mapleader = ','
-vim.g.maplocalleader = ';'
 
 -- save file
 vim.api.nvim_set_keymap('n', '<Leader><Leader>', ':w<CR>', {noremap = true, silent = true})
