@@ -118,7 +118,7 @@ return require("packer").startup(function(use)
         run = "bash ./build.sh",
         cond = "vim.fn.has('mac')"
     }
-    use {"rhysd/clever-f.vim"}
+    use {"rhysd/clever-f.vim", opt = true}
     use {
         "rhysd/accelerated-jk",
         event = "BufRead",
@@ -147,17 +147,21 @@ return require("packer").startup(function(use)
     require_plugin("nvim-lspconfig")
     require_plugin("lspsaga.nvim")
     require_plugin("nvim-lspinstall")
+    require_plugin('trouble.nvim')
     require_plugin("friendly-snippets")
     require_plugin("popup.nvim")
     require_plugin("plenary.nvim")
     require_plugin("telescope.nvim")
+    require_plugin('telescope-project.nvim')
     require_plugin("nvim-dap")
     require_plugin("nvim-compe")
     require_plugin("vim-vsnip")
     require_plugin("nvim-treesitter")
     require_plugin("nvim-ts-autotag")
+    require_plugin('vim-matchup')
     require_plugin("nvim-tree.lua")
     require_plugin("gitsigns.nvim")
+    require_plugin("git-blame.nvim")
     require_plugin("which-key.nvim")
     require_plugin("dashboard-nvim")
     require_plugin("nvim-autopairs")
@@ -167,13 +171,17 @@ return require("packer").startup(function(use)
     require_plugin("nvim-web-devicons")
     require_plugin("galaxyline.nvim")
     require_plugin("barbar.nvim")
+    require_plugin('lsp-rooter.nvim')
+    require_plugin("TrueZen.nvim")
+    require_plugin("nvim-ts-context-commentstring")
     require_plugin("surround.nvim")
+    require_plugin("hop.nvim")
     require_plugin("swim.vim")
     require_plugin("clever-f.vim")
-    require_plugin("iron.nvim")
     require_plugin("rhysd/accelerated-jk")
+    require_plugin("iron.nvim")
     require_plugin("lambdalisue/suda.vim")
-    require_plugin("hop.nvim")
+    require_plugin("norcalli/nvim-colorizer.lua")
 
         -- Extras
     if O.extras then
