@@ -73,14 +73,14 @@ return require("packer").startup(function(use)
     use {"ChristianChiarulli/dashboard-nvim", opt = true}
     use {"windwp/nvim-autopairs", opt = true}
     use {"kevinhwang91/nvim-bqf", opt = true}
-    
+
     -- Comments
     use {"terrortylor/nvim-comment", opt = true}
     use {'JoosepAlviste/nvim-ts-context-commentstring', opt = true}
 
     -- Color
     use {"christianchiarulli/nvcode-color-schemes.vim", opt = true}
-    use {"folke/tokyonight.nvim"}
+    use {"folke/tokyonight.nvim", opt = true}
 
     -- Icons
     use {"kyazdani42/nvim-web-devicons", opt = true}
@@ -95,6 +95,7 @@ return require("packer").startup(function(use)
     -- Text objects
     use {
         "blackCauldron7/surround.nvim",
+        opt = true,
         config = function()
             require "surround".setup {}
         end
@@ -135,6 +136,7 @@ return require("packer").startup(function(use)
     }
     use {
         "norcalli/nvim-colorizer.lua",
+        opt = true,
         ft = {"javascript", "javascriptreact", "typescript", "typescriptreact", "html", "css"},
         config = function()
             require'colorizer'.setup {
@@ -168,6 +170,7 @@ return require("packer").startup(function(use)
     require_plugin("nvim-comment")
     require_plugin("nvim-bqf")
     require_plugin("nvcode-color-schemes.vim")
+    require_plugin("tokyonight.nvim")
     require_plugin("nvim-web-devicons")
     require_plugin("galaxyline.nvim")
     require_plugin("barbar.nvim")
@@ -178,10 +181,10 @@ return require("packer").startup(function(use)
     require_plugin("hop.nvim")
     require_plugin("swim.vim")
     require_plugin("clever-f.vim")
-    require_plugin("rhysd/accelerated-jk")
+    require_plugin("accelerated-jk")
     require_plugin("iron.nvim")
-    require_plugin("lambdalisue/suda.vim")
-    require_plugin("norcalli/nvim-colorizer.lua")
+    require_plugin("suda.vim")
+    require_plugin("nvim-colorizer.lua")
 
         -- Extras
     if O.extras then
