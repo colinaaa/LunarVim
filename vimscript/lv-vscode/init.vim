@@ -1,5 +1,6 @@
 " packadd quickscope
 
+execute 'luafile ' . stdpath('config') . '/lua/lv-globals.lua'
 execute 'luafile ' . stdpath('config') . '/lua/settings.lua'
 execute 'luafile ' . stdpath('config') . '/lua/plugins.lua'
 
